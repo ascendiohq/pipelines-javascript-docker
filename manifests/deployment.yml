@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: ascendiohqpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ascendiohqpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: ascendiohqpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: ascendiohqpipelinesjavascriptdocker 
+          image: cascontainerregistry.azurecr.io/ascendiohqpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
